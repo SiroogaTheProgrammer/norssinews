@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anda's Journal</title>
+    <style>
+/* From Uiverse.io by vinodjangid07 */ 
+.button {
+  width: 50px;
+  height: 50px;
+  bottom: -20px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 0px 4px rgba(91, 198, 96, 0.253);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: 0.3s;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.button:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: rgb(91, 198, 96);
+  align-items: center;
+}
+
+.button:hover .svgIcon {
+  /* width: 20px; */
+  transition-duration: 0.3s;
+  transform: translateY(-200%);
+}
+
+.button::before {
+  position: absolute;
+  bottom: -20px;
+  content: "Back to Top";
+  color: white;
+  /* transition-duration: .3s; */
+  font-size: 0px;
+}
+
+.button:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  bottom: unset;
+  /* transform: translateY(-30px); */
+  transition-duration: 0.3s;
+}
+
+
+        /* Centering the radio buttons and content horizontally */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center; /* Center horizontally */
+            background-color: #f0f0f0;
+        }
+
+        .radio-inputs {
+            display: flex;
+            flex-wrap: wrap;
+            border-radius: 0.5rem;
+            background-color: #EEE;
+            box-sizing: border-box;
+            box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+            padding: 0.25rem;
+            width: 800px; /* Adjusted width to make it wider */
+            font-size: 18px;
+            margin-top: 18px; /* Add margin to push it down from the top */
+        }
+
+        .radio-inputs .radio {
+            flex: 1 1 auto;
+            text-align: center;
+        }
+
+        .radio-inputs .radio input {
+            display: none;
+        }
+
+        .radio-inputs .radio .name {
+            display: flex;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.5rem;
+            border: none;
+            padding: .5rem 0;
+            color: rgba(51, 65, 85, 1);
+            transition: all .15s ease-in-out;
+        }
+
+        .radio-inputs .radio input:checked + .name {
+            background-color: #fff;
+            font-weight: 600;
+        }
+
+        /* Container for cards */
+        .card-container {
+            display: flex;
+            justify-content: center; /* Center the cards horizontally */
+            gap: 25px; /* Add space between the cards */
+            margin-top: 23px;
+        }
+
+        /* Card styles */
+        .card {
+            width: 300px;
+            position: relative;
+            background: rgb(255, 255, 255);
+            padding: 20px;
+        }
+
+        .card::after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            width: 50%;
+            height: 10px;
+            bottom: 15px;
+            right: 0;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+            transform: rotate(5deg);
+            transition: all 0.1s ease-in;
+        }
+
+        .card::before {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            width: 50%;
+            height: 10px;
+            bottom: 15px;
+            left: 0;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+            transform: rotate(-5deg);
+            transition: all 0.1s ease-in;
+        }
+
+        .card:hover:before, .card:hover:after {
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.6);
+        }
+
+        .card:hover:before {
+            transform: rotate(-8deg);
+        }
+
+        .card:hover:after {
+            transform: rotate(8deg);
+        }
+
+        .card__img {
+            position: relative;
+            background: #007c0d;
+            background: linear-gradient(315deg, #68ffc0, #007c0d);
+            width: 100%;
+            height: 175px;
+        }
+
+        .card__imgE {
+            position: relative;
+            background: #67007c;
+            background: linear-gradient(315deg, #d968ff, #67007c);
+            width: 100%;
+            height: 175px;
+        }
+
+        .card__span {
+            cursor: pointer;
+            font-size: 11px;
+            position: absolute;
+            background-color: white;
+            top: 10px;
+            left: 10px;
+            padding: 3px 7px;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.1s ease-in;
+            user-select: none;
+        }
+
+        .card__span:hover {
+            transform: translateX(5px);
+        }
+
+        .card-int {
+            padding: 20px 0 0 0;
+        }
+
+        .card-int__title {
+            font-weight: bold;
+            font-size: 1.2rem;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-bottom: 10px;
+        }
+
+        .card-int__button {
+            cursor: pointer;
+            margin: 20px 0 0 0;
+            padding: 7px 20px;
+            width: 100%;
+            background-color: rgb(216, 255, 234);
+            border: none;
+            color: black;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
+            transition: box-shadow 0.1s ease-in;
+            user-select: none;
+        }
+
+        .card-int__button:active {
+            box-shadow: 0px 0px 15px rgba(0, 119, 255, 0.5);
+        }
+
+        .card-int__button:hover::before {
+            animation: effect_two 0.4s 1;
+        }
+
+        .card-int__button::before {
+            content: 'More for this article';
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            background: #007c0d;
+            background: linear-gradient(315deg, #68ffc0, #007c0d);
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            transform: translateX(-99%);
+            z-index: 1;
+            animation: effect_one 10s infinite;
+        }
+
+        .card-int__button:hover::before {
+            transform: translateX(0%);
+        }
+
+        .excerpt {
+            font-size: 14px;
+        }
+
+        @keyframes effect_one {
+            0% {
+                transform: translateX(-99%);
+            }
+
+            25% {
+                transform: translateX(-90%);
+            }
+
+            50% {
+                transform: translateX(-80%);
+            }
+
+            75% {
+                transform: translateX(-95%);
+            }
+
+            100% {
+                transform: translateX(-99%);
+            }
+        }
+
+        @keyframes effect_two {
+            to {
+                transform: translateX(-1%);
+            }
+
+            from {
+                transform: translateX(-99%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="radio-inputs">
+        <label class="radio">
+            <input type="radio" name="radio" onclick="location.href='home.html'">
+            <span class="name">Home</span>
+        </label>
+        <label class="radio">
+            <input type="radio" name="radio" checked="" onclick="location.href='ARTICLES_FIN.html'">
+            <span class="name">News</span>
+        </label>
+    </div>
+
+    <div class="card-container">
+        <div class="card">
+            <div class="card__corner"></div>
+            <div class="card__img">
+                <span class="card__span">Period 1</span>
+            </div>
+            <div class="card-int">
+                <p class="card-int__title">School begins!</p>
+                <p class="excerpt">Lorem ipsum dolor sit amet consectetur adipiscing elit, donec suspendisse vulputate dictumst enim per mus imperdiet, platea non massa dictum tempus sapien.</p>
+                <button class="card-int__button">Show</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card__corner"></div>
+            <div class="card__imgE">
+                <span class="card__span">Halloween</span>
+            </div>
+            <div class="card-int">
+                <p class="card-int__title">Highschool and Halloween</p>
+                <p class="excerpt">Lorem ipsum dolor sit amet consectetur adipiscing elit, donec suspendisse vulputate dictumst enim per mus imperdiet, platea non massa dictum tempus sapien.</p>
+                <button class="card-int__button">Show</button>
+            </div>
+        </div>
+    </div>
+
+
+<button class="button">
+  <svg class="svgIcon" viewBox="0 0 384 512">
+    <path
+      d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
+    ></path>
+  </svg>
+</button>
+
+<script>
+    // Get the button
+    const scrollToTopBtn = document.querySelector(".button");
+
+    // When the user clicks on the button, scroll to the top of the document
+    scrollToTopBtn.onclick = function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+</script>
+
+<div><br>
+    <br></div>
+</body>
+</html>
