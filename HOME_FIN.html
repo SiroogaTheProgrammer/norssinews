@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Norssi News</title>
+    <style>
+.styled-title {
+  font-family: 'Montserrat', sans-serif; /* Modern, clean font */
+  width: 780px;
+  font-size: 48px; /* Large text size */
+  font-weight: 700; /* Bold text */
+  color: #333; /* Dark gray color for text */
+  text-align: center; /* Center the title */
+  text-transform: uppercase; /* Uppercase letters for a strong impact */
+  letter-spacing: 2px; /* Spacing between letters */
+  margin-top: 15px; /* Space from the top of the page */
+  margin-bottom: 0px; /* Space from elements below */
+  padding: 10px; /* Space inside the title element */
+  background: linear-gradient(90deg, #db658e, #db658e); /* Gradient background */
+  color: white; /* White text color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.styled-title:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+
+
+        /* Centering the radio buttons horizontally */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center; /* Center horizontally */
+            background-color: #f0f0f0;
+        }
+
+        .radio-inputs {
+            display: flex;
+            flex-wrap: wrap;
+            border-radius: 0.5rem;
+            background-color: #EEE;
+            box-sizing: border-box;
+            box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+            padding: 0.25rem;
+            width: 800px; /* Adjusted width to make it wider */
+            font-size: 18px;
+            margin-top: 18px; /* Add margin to push it down from the top */
+        }
+
+        .radio-inputs .radio {
+            flex: 1 1 auto;
+            text-align: center;
+        }
+
+        .radio-inputs .radio input {
+            display: none;
+        }
+
+        .radio-inputs .radio .name {
+            display: flex;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.5rem;
+            border: none;
+            padding: .5rem 0;
+            color: rgba(51, 65, 85, 1);
+            transition: all .15s ease-in-out;
+        }
+
+        .radio-inputs .radio input:checked + .name {
+            background-color: #fff;
+            font-weight: 600;
+        }
+
+        /* Image Styling */
+        img {
+            margin-top: 15px; /* Add some space between the radio buttons and the image */
+            margin-bottom: 15px;
+            width: 800px; /* Ensure the image width matches the radio buttons container */
+            height: auto; /* Maintain the aspect ratio */
+            border-radius: 0.5rem; /* Optional: Add rounded corners to the image */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a slight shadow */
+        }
+
+        /*text*/
+
+        .container {
+            width: 800px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Optional: Responsive adjustments */
+        @media (max-width: 800px) {
+            .container {
+                width: 90%;
+                padding: 10px;
+            }
+
+            h1, h2 {
+                font-size: 20px;
+            }
+        }
+
+        /*shool button*/
+        /* From Uiverse.io by rmdhnkhsn */ 
+.card {
+  position: relative;
+  display: flex;
+  max-width: 700px;
+  padding: 42px 32px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 30px;
+  border: 2px solid #f8f9fd;
+  background: #fff;
+  transition: 1s all;
+  text-decoration: none;
+  margin-bottom: 30px;
+}
+.title {
+  color: #072713;
+  text-align: center;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 35.196px;
+  transition: 0.4s all;
+}
+.subtitle {
+  color: #7e8882;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  transition: 0.4s all;
+}
+.icon-circle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #c2f5d4;
+}
+.card:hover {
+  background: #5bce85;
+  transition: 0.4s all;
+  transform: scale(1.05);
+}
+.card:hover .title,
+.card:hover .subtitle {
+  color: #fff;
+  transition: 0.4s all;
+}
+.btnRound {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  padding: 6px 28px;
+  border-radius: 100px;
+  border: 1px solid #5bce85;
+  background: #fff;
+  transition: all 0.2s ease;
+}
+.btnRound:hover {
+  box-shadow: 0px 6px 10px 0px rgba(35, 197, 94, 0.2);
+  transition: all 0.2s ease;
+}
+.btnService {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box {
+  width: 100%;
+  background-color: #db658e;
+}
+
+
+/*socials*/
+.cardS {
+  position: relative;
+  left: 39.5%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  height: 60px;
+  width: 600px;
+}
+
+.cardS svg {
+  position: absolute;
+  display: flex;
+  width: 30px;
+  height: 30px;
+  font-size: 24px;
+  font-weight: 700;
+  opacity: 1;
+  transition: opacity 0.25s;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.cardS .social-link1,.cardS .social-link2,.cardS .social-link3,.cardS .social-link4,.cardS .social-link5,.cardS .social-link6,.cardS .social-link7,.cardS .social-link8 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  color: whitesmoke;
+  font-size: 24px;
+  text-decoration: none;
+  transition: 0.25s;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+
+.cardS svg {
+  transform: scale(1);
+}
+
+.cardS .social-link1:hover {
+  background: #f09433;
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  animation: bounce_613 0.4s linear;
+}
+
+.cardS .social-link2:hover {
+  background-color: #00ccff;
+  animation: bounce_613 0.4s linear;
+}
+
+.cardS .social-link5:hover {
+  background-color: #1a1e22;
+  animation: bounce_613 0.4s linear;
+}
+
+.cardS .social-link8:hover {
+  background-color: #1d4292;
+  animation: bounce_613 0.4s linear;
+}
+
+@keyframes bounce_613 {
+  40% {
+    transform: scale(1.4);
+  }
+
+  60% {
+    transform: scale(0.8);
+  }
+
+  80% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+    </style>
+</head>
+<body>
+    <div class="radio-inputs">
+        <label class="radio">
+            <input type="radio" name="radio" checked="" onclick="location.href='HOME_FIN.html'">
+            <span class="name">Home</span>
+        </label>
+        <label class="radio">
+            <input type="radio" name="radio" onclick="location.href='ARTICLES_FIN.html'">
+            <span class="name">News</span>
+        </label>
+    </div>
+    <h1 class="styled-title">Norssi News</h1>
+    <img src="schoolPhoto.png" alt="Norssi">
+
+
+    <div class="container">
+        <h2>Unleash Your Voice. Share Your Story. Make a Difference.</h2>
+
+        <p>At the heart of every vibrant school community lies a group of passionate individuals dedicated to telling the stories that matter most. Welcome to Norssi News, where creativity meets journalism, and every student’s voice finds a platform.</p>
+        
+        <h2>Introduction to the Journalism Club</h2>
+
+        <p>Uncovering hidden mysteries, enlarging fascinating stories, and promoting exciting activities found in our school, we welcome all to Norssi News. Home to the knowledge seekers, detectives, and writers of our school, our club was created for the pursuit of informing the students and teachers of TIS about interesting events—past, present, and future. Through our personal website, we aim to share engaging and insightful stories that matter.</p>
+
+        <h2>Our Mission</h2>
+
+        <p>Norssi News is committed to fostering a dynamic environment where students can explore and express their journalistic talents. Our mission is to provide an inclusive and supportive space for students to develop their writing skills, engage in investigative reporting, and contribute to a thriving school community through thoughtful, impactful journalism. We publish a regular gazette and articles covering a wide range of topics—from school events and achievements to student opinions and creative stories. Our goal is to keep the school community informed, engaged, and inspired.</p>
+
+        <h2>What We Do</h2>
+
+        <ul>
+            <li><strong>Create Content:</strong> From feature articles and interviews to news reports and opinion pieces, our members produce a diverse range of content that captures the essence of school life and beyond found on our own tik tok account Norssi News and other listed socials. Whether you have a knack for writing, photography, or digital media, there’s a place for you here.</li>
+            <li><strong>Develop Skills:</strong> We offer workshops and training sessions on various aspects of journalism, including news writing, editorial skills, multimedia storytelling, and ethical reporting. Our goal is to equip you with the tools and knowledge needed to excel in the world of journalism.</li>
+            <li><strong>School Promotion:</strong> Our club plays a crucial role in highlighting school events, achievements, and student voices.
+                We believe in celebrating the successes of our peers and creating a sense of unity and pride within our school community.</li>
+            <li><strong>Engage in Real Reporting:</strong> Members have the opportunity to engage in real-world reporting experiences. From covering major school events and conducting interviews to investigating important issues affecting our school, we provide hands-on opportunities to practice and refine your journalistic skills.</li>
+            <li><strong>Collaborate and Network:</strong> Journalism is a team effort. Our club encourages collaboration and networking among members. Whether you’re brainstorming story ideas, working on a group project, or seeking feedback on your work, you’ll find a supportive community ready to help you succeed.</li>
+        </ul>
+
+        <h2>How to Get Involved</h2>
+
+        <p>Joining Norssi News is easy! We welcome students from all grades and backgrounds.</p>
+
+        <h2>Attend Our Meetings:</h2>
+
+        <ul>
+            <li><strong>Period 1</strong> Thursdays at 4:05 in class B3106.</li>
+            <li><strong>Period 2</strong> Thursdays at 4:05 in class B3106.</li>
+            <li><strong>Period 3</strong> Unknown</li>
+            <li><strong>Period 4</strong> Unknown</li>
+            <li><strong>Period 5</strong> Unknown</li>
+        </ul>
+
+        <h2>Why Join Us?</h2>
+
+        <ul>
+            <li><strong>Develop Valuable Skills:</strong> Journalism helps you develop critical thinking, research, writing, and communication skills that are invaluable in any field.</li>
+            <li><strong>Build Your Portfolio:</strong> Gain practical experience and build a portfolio of published work that showcases your talents and dedication.</li>
+            <li><strong>Make a Difference:</strong> Use your voice to inform, inspire, and engage your fellow students and the broader school community.</li>
+        </ul>
+    </div>
+
+<h1></h1>
+<h1></h1>
+<h1></h1>
+
+    <a class="card" href="https://sites.utu.fi/tnk/">
+      <div class="containers">
+        <div class="icon-circle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 28 29"
+            height="29"
+            width="28"
+          >
+            <path
+              stroke-linejoin="round"
+              stroke-linecap="round"
+              stroke-width="1.5"
+              stroke="#23C55E"
+              d="M23.7222 9.04435V6.71102C23.7222 5.42235 22.6775 4.37769 21.3888 4.37769L6.61106 4.37769C5.32239 4.37769 4.27773 5.42235 4.27773 6.71102V9.04435C4.27773 10.333 5.32239 11.3777 6.61106 11.3777H21.3888C22.6775 11.3777 23.7222 10.333 23.7222 9.04435Z"
+            ></path>
+            <path
+              stroke-linejoin="round"
+              stroke-linecap="round"
+              stroke-width="1.5"
+              stroke="#23C55E"
+              d="M23.7222 21.4888V19.1555C23.7222 17.8668 22.6775 16.8221 21.3888 16.8221H15.9444C14.6557 16.8221 13.6111 17.8668 13.6111 19.1555V21.4888C13.6111 22.7775 14.6557 23.8221 15.9444 23.8221H21.3888C22.6775 23.8221 23.7222 22.7775 23.7222 21.4888Z"
+            ></path>
+          </svg>
+        </div>
+        <div class="title mb-3">Our School</div>
+        <div class="subtitle">
+            Welcome to Turun Normaalikoulu IB, where we nurture curiosity, foster global perspectives, and guide students toward academic
+             excellence in a supportive, diverse community. We are excited to have you join our vibrant learning environment!
+        </div>
+        <div class="btnRound btnService">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 19 18"
+            height="18"
+            width="19"
+          >
+            <path
+              stroke-linejoin="round"
+              stroke-linecap="round"
+              stroke-width="1.5"
+              stroke="#23C55E"
+              d="M3.51141 2.78405L14.9344 6.95805C15.4154 7.13405 15.4014 7.81905 14.9134 7.97605L9.68541 9.64905L8.01241 14.8771C7.85641 15.3651 7.17041 15.3791 6.99441 14.8981L2.82141 3.47405C2.66441 3.04405 3.08141 2.62705 3.51141 2.78405Z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </a>
+  
+    <div class="box">
+      <div class="cardS">
+        <a class="social-link1">
+          <svg viewBox="0 0 16 16" class="bi bi-instagram" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg" style="color: white"> <path fill="white" d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path> </svg>
+        </a>
+        <a class="social-link2">
+          <svg viewBox="0 0 16 16" class="bi bi-twitter" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg" style="color: white"> <path fill="white" d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path> </svg>              </a>
+        <a class="social-link5" href="https://github.com/SiroogaTheProgrammer">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" height="1em" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+        </a>
+        <a class="social-link8">
+          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" fill="#fff"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg>
+        </a>
+      </div> 
+    </div>
+</body>
+</html>
