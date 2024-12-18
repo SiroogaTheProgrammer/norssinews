@@ -4,74 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anda's Journal</title>
+
     <style>
-/* From Uiverse.io by vinodjangid07 */ 
-.button {
-  width: 50px;
-  height: 50px;
-  bottom: -20px;
-  border-radius: 50%;
-  background-color: rgb(20, 20, 20);
-  border: none;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0px 0px 0px 4px rgba(91, 198, 96, 0.253);
-  cursor: pointer;
-  transition-duration: 0.3s;
-  overflow: hidden;
-  position: relative;
-}
+        /* From Uiverse.io by vinodjangid07 */
+        .button {
+            width: 50px;
+            height: 50px;
+            bottom: -20px;
+            border-radius: 50%;
+            background-color: rgb(20, 20, 20);
+            border: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 0px 0px 4px rgba(91, 198, 96, 0.253);
+            cursor: pointer;
+            transition-duration: 0.3s;
+            overflow: hidden;
+            position: relative;
+        }
 
-.svgIcon {
-  width: 12px;
-  transition-duration: 0.3s;
-}
+        .svgIcon {
+            width: 12px;
+            transition-duration: 0.3s;
+        }
 
-.svgIcon path {
-  fill: white;
-}
+        .svgIcon path {
+            fill: white;
+        }
 
-.button:hover {
-  width: 140px;
-  border-radius: 50px;
-  transition-duration: 0.3s;
-  background-color: rgb(91, 198, 96);
-  align-items: center;
-}
+        .button:hover {
+            width: 140px;
+            border-radius: 50px;
+            transition-duration: 0.3s;
+            background-color: rgb(91, 198, 96);
+            align-items: center;
+        }
 
-.button:hover .svgIcon {
-  /* width: 20px; */
-  transition-duration: 0.3s;
-  transform: translateY(-200%);
-}
+        .button:hover .svgIcon {
+            transition-duration: 0.3s;
+            transform: translateY(-200%);
+        }
 
-.button::before {
-  position: absolute;
-  bottom: -20px;
-  content: "Back to Top";
-  color: white;
-  /* transition-duration: .3s; */
-  font-size: 0px;
-}
+        .button::before {
+            position: absolute;
+            bottom: -20px;
+            content: "Back to Top";
+            color: white;
+            font-size: 0px;
+        }
 
-.button:hover::before {
-  font-size: 13px;
-  opacity: 1;
-  bottom: unset;
-  /* transform: translateY(-30px); */
-  transition-duration: 0.3s;
-}
-
+        .button:hover::before {
+            font-size: 13px;
+            opacity: 1;
+            bottom: unset;
+            transition-duration: 0.3s;
+        }
 
         /* Centering the radio buttons and content horizontally */
         body {
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: column; /* Stack elements vertically */
-            align-items: center; /* Center horizontally */
+            flex-direction: column;
+            align-items: center;
             background-color: #f0f0f0;
         }
 
@@ -83,9 +80,10 @@
             box-sizing: border-box;
             box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
             padding: 0.25rem;
-            width: 800px; /* Adjusted width to make it wider */
+            width: 100%;
+            max-width: 800px;
             font-size: 18px;
-            margin-top: 18px; /* Add margin to push it down from the top */
+            margin-top: 18px;
         }
 
         .radio-inputs .radio {
@@ -117,14 +115,16 @@
         /* Container for cards */
         .card-container {
             display: flex;
-            justify-content: center; /* Center the cards horizontally */
-            gap: 25px; /* Add space between the cards */
+            justify-content: center;
+            gap: 25px;
             margin-top: 23px;
+            flex-wrap: wrap;
         }
 
         /* Card styles */
         .card {
-            width: 300px;
+            width: 100%;
+            max-width: 300px;
             position: relative;
             background: rgb(255, 255, 255);
             padding: 20px;
@@ -156,7 +156,8 @@
             transition: all 0.1s ease-in;
         }
 
-        .card:hover:before, .card:hover:after {
+        .card:hover:before,
+        .card:hover:after {
             box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.6);
         }
 
@@ -292,14 +293,49 @@
                 transform: translateX(-99%);
             }
         }
+
+        /* Media queries for smaller devices */
+        @media (max-width: 768px) {
+            .radio-inputs {
+                width: 95%;
+            }
+
+            .card {
+                width: 100%;
+                max-width: 90%;
+            }
+
+            .button {
+                bottom: 10px;
+                right: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .radio-inputs {
+                font-size: 16px;
+            }
+
+            .card-int__title {
+                font-size: 1rem;
+            }
+
+            .excerpt {
+                font-size: 12px;
+            }
+        }
     </style>
+
 </head>
+
 <body>
+
     <div class="radio-inputs">
         <label class="radio">
             <input type="radio" name="radio" onclick="location.href='home.html'">
             <span class="name">Home</span>
         </label>
+
         <label class="radio">
             <input type="radio" name="radio" checked="" onclick="location.href='ARTICLES_FIN.html'">
             <span class="name">News</span>
@@ -308,62 +344,44 @@
 
     <div class="card-container">
         <div class="card">
-            <div class="card__corner"></div>
             <div class="card__img">
                 <span class="card__span">Period 1</span>
             </div>
             <div class="card-int">
                 <p class="card-int__title">School begins!</p>
-                <p class="excerpt">Turku International School and Turun Normaalikoulu Begin a New Year,<br/>TJ100 - A Finnish High School Tradition,<br/>The First Exam Week of the Year</p>
+                <p class="excerpt">Turku International School and Turun Normaalikoulu Begin a New Year,<br />TJ100 - A Finnish High School Tradition,<br />The First Exam Week of the Year</p>
                 <button class="card-int__button" onclick="window.location.href='period1article.html'">Show</button>
             </div>
         </div>
-
         <div class="card">
-            <div class="card__corner"></div>
-            <div class="card__imgE">
-                <span class="card__span">Halloween</span>
+            <div class="card__img">
+                <span class="card__span">Period 2</span>
             </div>
             <div class="card-int">
-                <p class="card-int__title">Highschool and Halloween</p>
-                <p class="excerpt">Lorem ipsum dolor sit amet consectetur adipiscing elit, donec suspendisse vulputate dictumst enim per mus imperdiet, platea non massa dictum tempus sapien.</p>
-                <button class="card-int__button">Show</button>
+                <p class="card-int__title">October Breaks!</p>
+                <p class="excerpt">Highlights of the First Break,<br />Halloween in Turku,<br />Autumn Colors and Tips for Taking Photos</p>
+                <button class="card-int__button" onclick="window.location.href='period2article.html'">Show</button>
             </div>
         </div>
-
         <div class="card">
-            <div class="card__corner"></div>
             <div class="card__imgE">
-                <span class="card__span">Theme week</span>
+                <span class="card__span">Period 3</span>
             </div>
             <div class="card-int">
-                <p class="card-int__title">Themeweek in Norssi</p>
-                <p class="excerpt">Lorem ipsum dolor sit amet consectetur adipiscing elit, donec suspendisse vulputate dictumst enim per mus imperdiet, platea non massa dictum tempus sapien.</p>
-                <button class="card-int__button" onclick="window.location.href='themeweek.html'">Show</button>
+                <p class="card-int__title">Christmas Celebrations!</p>
+                <p class="excerpt">Seasonal Activities,<br />Events in Turku,<br />Year End Recap and New Year Resolutions</p>
+                <button class="card-int__button" onclick="window.location.href='period3article.html'">Show</button>
             </div>
         </div>
     </div>
 
+    <!-- Button to scroll to top -->
+    <button class="button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+        <svg xmlns="http://www.w3.org/2000/svg" class="svgIcon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
 
-<button class="button">
-  <svg class="svgIcon" viewBox="0 0 384 512">
-    <path
-      d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
-    ></path>
-  </svg>
-</button>
-
-<script>
-    // Get the button
-    const scrollToTopBtn = document.querySelector(".button");
-
-    // When the user clicks on the button, scroll to the top of the document
-    scrollToTopBtn.onclick = function() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-</script>
-
-<div><br>
-    <br></div>
 </body>
+
 </html>
