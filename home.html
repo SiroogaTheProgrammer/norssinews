@@ -279,6 +279,22 @@ h4 {
   }
 }
 
+        .hover-easter-egg {
+            transition: all 1s ease-in-out;
+        }
+
+        /* Default state */
+        .hover-easter-egg::before {
+            content: "Github and other projects";
+            transition: opacity 1s ease-in-out;
+        }
+
+        /* Hover state: replace with surprise text */
+        .hover-easter-egg:hover::before {
+            content: "I love self promotion :)";
+            color: rgb(255, 255, 255); /* Optional: Change the color of the surprise text */
+        }
+
     </style>
 </head>
 <body>
@@ -402,9 +418,7 @@ h4 {
       <div class="footer-container">
         <div class="social-links">
           <h4>Social Media</h4>
-          <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
-          <a href="https://www.instagram.com/" target="_blank">Instagram</a>
-          <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+          <a href="https://www.tiktok.com/@norssinews?_t=ZN-8t0iiNyAQXW&_r=1" target="_blank">TikTok</a>
         </div>
         <div class="invite-links">
           <h4>Invite Links</h4>
@@ -412,19 +426,14 @@ h4 {
           <a href="https://teams.microsoft.com/l/team/invite-link" target="_blank">Microsoft Teams</a>
         </div>
         <div class="source-code">
-          <h4>Github</h4>
+          <h4 class="hover-easter-egg"></h4>
           <a href="https://github.com/SiroogaTheProgrammer/norssinews" target="_blank">Norssi News</a>
-          <a href="https://github.com/SerjSei/childrenBooks" target="_blank">ChildrensBooks</a>
           <a href="https://github.com/SiroogaTheProgrammer" target="_blank">SiroogaTheProgrammer</a>
-        </div>
-        <div class="source-code">
-          <h4>Other Projects</h4>
-          <a href="https://childrensbooks.netlify.app" target="_blank">childrensBooks</a>
+          <a href="https://folibustracker.netlify.app" target="_blank">Föli Bus Tracker</a>
         </div>
         <div class="contact-info">
           <h4>Contact</h4>
-          <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
-          <p>Email: <a href="mailto:example@email.com">example@email.com</a></p>
+          <p>Email: <a href="mailto:norssinews@gmail.com">norssinews@gmail.com</a></p>
         </div>
       </div>
     </footer>
